@@ -116,8 +116,16 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
-/* Buttons */
-.btn {
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -226,7 +234,6 @@ section h2 {
   text-decoration: underline;
 }
 
-/* Phase Cards */
 .phase-card {
   background: white;
   border-radius: 0.75rem;
@@ -238,7 +245,8 @@ section h2 {
 
 .phase-card:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  border-top-color: var(--secondary-color);
 }
 
 .phase-number {
