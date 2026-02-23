@@ -1,0 +1,39 @@
+# GitHub Pages Configuration for AI for Product Owner
+
+# Site settings
+title: AI for Product Owner
+description: A comprehensive 20-week enterprise AI product owner certification course
+url: https://PankajBhanushali.github.io
+baseurl: /AI-for-Product-Owner
+repository: PankajBhanushali/AI-for-Product-Owner
+
+# Author
+author:
+  name: Pankaj Bhanushali
+  email: contact@pankajbhanushali.com
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - curriculum/
+  - labs/
+  - assessments/
+
+# Collections
+collections:
+  curriculum:
+    output: false
+    permalink: /curriculum/:path/
