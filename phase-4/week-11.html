@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11: Data Strategy - AI for Product Owner</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI for Product Owner</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#curriculum">Curriculum</a></li>
+                <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html">Phase 4</a> <span>/</span> <span>Week 11: Data Strategy</span>
+    </div>
+
+    <main>
+        <section class="hero" style="padding: 3rem 2rem; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
+            <div class="hero-content">
+                <h1 style="margin-bottom: 0.5rem;">📊 Week 11: Data Strategy</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Building a sustainable data foundation for AI</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                    <div>⏱️ <strong>Duration:</strong> 1 week</div>
+                    <div>📚 <strong>Content:</strong> 5-6 hours</div>
+                    <div>🎯 <strong>Level:</strong> Intermediate</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 2rem;">
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: #6366f1; margin-bottom: 1.5rem;">🎯 What You'll Learn</h2>
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="border-left-color: #818cf8;">
+                        <h4>Data Collection</h4>
+                        <p>Gathering and preparing training data</p>
+                    </div>
+                    <div class="card" style="border-left-color: #818cf8;">
+                        <h4>Data Quality</h4>
+                        <p>Ensuring data is clean, correct, representative</p>
+                    </div>
+                    <div class="card" style="border-left-color: #818cf8;">
+                        <h4>Data Governance</h4>
+                        <p>Privacy, security, and ethical data management</p>
+                    </div>
+                    <div class="card" style="border-left-color: #818cf8;">
+                        <h4>Data Labeling</h4>
+                        <p>Cost-effective approaches to annotation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem; padding: 2rem; background: #eef2ff; border-radius: 0.75rem; border-left: 4px solid #6366f1;">
+                <h2 style="color: #6366f1; margin-bottom: 1rem;">Data Strategy Fundamentals</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Data is the New Oil</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">Good AI requires good data. The formula:</p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li><strong>Volume:</strong> For supervised learning: 100s minimum, 1000s+ ideal</li>
+                            <li><strong>Quality:</strong> Accurate labels. No mislabeling (worst!</li>
+                            <li><strong>Diversity:</strong> Represents all use cases (not biased toward one segment)</li>
+                            <li><strong>Freshness:</strong> Data reflects current conditions (stale data = bad predictions)</li>
+                        </ul>
+                        <p style="color: var(--text-dark); background: #fef3c7; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;"><strong>Rule:</strong> Data quality matters more than quantity. 1000 perfect labels > 1M mislabeled ones.</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">The Data Workflow</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">1. Collection</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Where does data come from? Product logs, user interactions, manual uploads</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">2. Storage</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Data warehouse, data lake, or database</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">3. Cleaning</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Remove duplicates, fix errors, handle missing values</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">4. Labeling</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Add ground truth (what the right answer is)</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">5. Feature Engineering</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Transform raw data into useful signals for models</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">6. Validation</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Split into train/test sets, check for bias</p>
+                        </div>
+
+                        <div>
+                            <strong style="color: #6366f1;">7. Documentation</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Datasheets explaining data, sources, limitations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Data Labeling Strategies</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Labeling is often the bottleneck. Three approaches:</strong></p>
+                        
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">1. Manual Labeling</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Humans label every example</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;"><strong>Cost:</strong> $0.10-1 per label. <strong>Quality:</strong> High. <strong>Speed:</strong> Slow for large datasets</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">2. Weak Supervision</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Use heuristics or existing systems to auto-label</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;"><strong>Cost:</strong> Low. <strong>Quality:</strong> Noisy. <strong>Speed:</strong> Fast</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem;">
+                            <strong style="color: #6366f1;">3. Active Learning</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Model identifies most uncertain examples for humans to label</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;"><strong>Cost:</strong> Medium. <strong>Quality:</strong> High. <strong>Value/label:</strong> High</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h2 style="color: #6366f1; margin-bottom: 1rem;">✏️ Your Exercise This Week</h2>
+                <div style="background: #dbeafe; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Build Your Data Strategy Document</h3>
+                    <ol style="margin-left: 2rem; color: var(--text-light);">
+                        <li>Identify all data sources for your AI features</li>
+                        <li>Estimate data volume available today</li>
+                        <li>Define data quality metrics and validation rules</li>
+                        <li>Choose labeling strategy (manual/weak/active)</li>
+                        <li>Create data governance policy (privacy, access, retention)</li>
+                        <li>Document data lineage and ownership</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="../index.html" class="btn btn-secondary">← Back to Phase 4</a>
+                <a href="week-12.html" class="btn btn-primary">Next: Week 12 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>📚 Week 11</h4>
+                <ul>
+                    <li>Data Collection</li>
+                    <li>Quality</li>
+                    <li>Labeling</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📖 Resources</h4>
+                <ul>
+                    <li><a href="../index.html">Back to Phase 4</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="week-12.html">Week 12</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤝 Community</h4>
+                <ul>
+                    <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub Repo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI for Product Owner. Licensed under CC BY 4.0.</p>
+        </div>
+    </footer>
+</body>
+</html>
