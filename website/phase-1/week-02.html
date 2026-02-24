@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Large Language Models & Generative AI - AI for Product Owner</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI for Product Owner</div>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../curriculum/">Curriculum</a></li>
+                <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="../../index.html">Home</a> <span>/</span> <a href="../index.html">Phase 1</a> <span>/</span> <span>Week 2: LLMs & Generative AI</span>
+    </div>
+
+    <main>
+        <!-- Week Header -->
+        <section class="hero" style="padding: 3rem 2rem; background: linear-gradient(135deg, #059669 0%, #065f46 100%);">
+            <div class="hero-content">
+                <h1 style="margin-bottom: 0.5rem;">💬 Week 2: Large Language Models & Generative AI</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Understand the revolution that's transforming product development</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                    <div>⏱️ <strong>Duration:</strong> 1 week</div>
+                    <div>📚 <strong>Content:</strong> 4-5 hours</div>
+                    <li>🎯 <strong>Level:</strong> Beginner to Intermediate</li>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 2rem;">
+            <!-- Week Learning Objectives -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: #059669; margin-bottom: 1.5rem;">🎯 What You'll Learn</h2>
+                
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="border-left-color: #10b981;">
+                        <h4>How LLMs Work</h4>
+                        <p>The transformer architecture, attention mechanisms, and why they're revolutionary</p>
+                    </div>
+                    <div class="card" style="border-left-color: #10b981;">
+                        <h4>Capabilities & Limitations</h4>
+                        <p>What LLMs are excellent at and where they reliably fail</p>
+                    </div>
+                    <div class="card" style="border-left-color: #10b981;">
+                        <h4>Prompting Mastery</h4>
+                        <p>How to structure requests to get the best outputs from LLMs</p>
+                    </div>
+                    <div class="card" style="border-left-color: #10b981;">
+                        <h4>Product Implications</h4>
+                        <p>How to think about LLMs in your product strategy</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Content -->
+            <div style="margin-bottom: 3rem; padding: 2rem; background: #f0fdf4; border-radius: 0.75rem; border-left: 4px solid #10b981;">
+                <h2 style="color: #059669; margin-bottom: 1rem;">Core Concepts</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">What are Large Language Models?</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">LLMs are neural networks trained on massive amounts of text data (books, articles, websites, code) to predict the next word in a sequence. This simple task, repeated billions of times, creates emergent intelligence.</p>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Examples you know:</strong> GPT-4, Claude, Gemini, Llama 2, Mistral</p>
+                        <p style="color: var(--text-light); margin: 0;"><strong>Why now?</strong> Combination of more data, more compute power, and algorithmic breakthroughs (transformers)</p>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">How Do LLMs Work? (Simplified)</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">The process LLMs use to generate text:</p>
+                        <ol style="margin-left: 2rem; margin-top: 0; color: var(--text-light);">
+                            <li><strong>Tokenization:</strong> Text is broken into tokens (words/subwords). "Hello world" → ["Hello", " world"]</li>
+                            <li><strong>Embedding:</strong> Each token becomes a vector (array of numbers representing meaning)</li>
+                            <li><strong>Transformers:</strong> Attention mechanism weighs which tokens matter most for each position</li>
+                            <li><strong>Prediction:</strong> Model outputs probability for the next token (e.g., "world" is 85% likely)</li>
+                            <li><strong>Repetition:</strong> Use predicted token as input for next prediction (autoregressive generation)</li>
+                        </ol>
+                        <p style="color: var(--text-light); margin-top: 1rem; font-style: italic;">Result: Coherent, contextual text that seems to understand you</p>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">The Transformer: Game Changer</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">Introduced in 2017 paper "Attention is All You Need," transformers enable:</p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li><strong>Parallel processing:</strong> Train on data much faster</li>
+                            <li><strong>Long-range context:</strong> Understand relationships between distant words</li>
+                            <li><strong>Scaling benefits:</strong> Bigger models = better performance (unlike traditional ML)</li>
+                        </ul>
+                        <p style="color: var(--text-light); margin-top: 1rem;"><strong>Key insight:</strong> This is why OpenAI, DeepMind, Meta all built on transformers</p>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Capabilities: What LLMs Are Excellent At</h3>
+                        <ul style="margin-left: 2rem; margin-top: 1rem; color: var(--text-light);">
+                            <li>✅ <strong>Text generation:</strong> Creative writing, emails, documentation</li>
+                            <li>✅ <strong>Question answering:</strong> Summarizing documents, explaining concepts</li>
+                            <li>✅ <strong>Code generation:</strong> Writing, debugging, documenting code</li>
+                            <li>✅ <strong>Summarization & abstraction:</strong> Boiling down long content to key points</li>
+                            <li>✅ <strong>Translation:</strong> Between languages (now very good)</li>
+                            <li>✅ <strong>Reasoning:</strong> Step-by-step problem solving (with prompting)</li>
+                            <li>✅ <strong>Conversation:</strong> Role-playing, persona adoption</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Limitations: What LLMs Cannot Do (Yet)</h3>
+                        <ul style="margin-left: 2rem; margin-top: 1rem; color: var(--text-light);">
+                            <li>❌ <strong>Real-time information:</strong> They have a knowledge cutoff (GPT-4 = April 2023)</li>
+                            <li>❌ <strong>Mathematical precision:</strong> Can't reliably do complex math or execute exact calculations</li>
+                            <li>❌ <strong>External system access:</strong> Can't browse the internet, check databases, or call APIs (without plugins)</li>
+                            <li>❌ <strong>True reasoning:</strong> It's pattern matching at scale, not actual thinking</li>
+                            <li>❌ <strong>Guaranteed accuracy:</strong> They "hallucinate" (confidently state false facts)</li>
+                            <li>❌ <strong>Zero-shot consistency:</strong> Same question asked twice might get different answers</li>
+                            <li>❌ <strong>Reasoning over very long contexts:</strong> Gets worse with more text</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">⚠️ Hallucinations: The #1 Challenge</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">LLMs generate confident-sounding but false information. Examples:</p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Citation of papers that don't exist</li>
+                            <li>Recipes with fake ingredients</li>
+                            <li>Code that looks right but has bugs</li>
+                            <li>Historical facts that are completely made up</li>
+                        </ul>
+                        <p style="color: var(--text-light); margin-top: 1rem;"><strong>Why?</strong> The model's job is to predict likely tokens, not verify truth. It's trained on internet text (much of which is wrong).</p>
+                        <p style="color: var(--text-dark); background: #fef3c7; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;"><strong>For product teams:</strong> Never trust LLM output without verification. Always have humans in the loop for critical decisions.</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">📖 Practical Example: AI-Powered Customer Support Chatbot</h3>
+                    <div style="background: #fef3c7; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
+                        <p><strong>The Scenario:</strong> E-commerce company handles 10,000 customer support tickets monthly. Response time is 24+ hours.</p>
+                        <p style="margin-top: 0.5rem;"><strong>The AI Solution:</strong></p>
+                        <ol style="margin-left: 2rem; margin-top: 0.5rem; color: var(--text-light);">
+                            <li><strong>Fine-tune LLM:</strong> Train on past support conversations (best practices)</li>
+                            <li><strong>Add Retrieval System:</strong> Let it access company knowledge base (products, policies, FAQs)</li>
+                            <li><strong>Deploy Chatbot:</strong> Handle 70% of common issues instantly</li>
+                            <li><strong>Human Escalation:</strong> Route complex issues to agents</li>
+                        </ol>
+                        <p style="margin-top: 1rem; color: var(--text-dark);"><strong>Impact:</strong> 24/7 support, <2min first response, agents focus on complex issues, 30% cost savings</p>
+                        <p style="margin-top: 0.5rem; color: var(--text-dark);"><strong>The Challenge:</strong> Hallucinations could give wrong product info. Solution: Audit outputs, keep human review for refunds.</p>
+                        <p style="margin-top: 0.5rem; color: var(--text-dark);"><strong>Metrics to Track:</strong> Resolution rate, customer satisfaction, false positive rate (wrong answers)</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">🎯 Prompting Mastery: How to Talk to LLMs</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Good Prompting is a Skill:</strong> Same model, better prompts = better results. No code required.</p>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: #059669;">Prompting Best Practices</h4>
+                            <ul style="margin-left: 2rem; color: var(--text-light);">
+                                <li><strong>Be Specific:</strong> "Summarize this in 2 bullets for a CEO" vs "tell me about this"</li>
+                                <li><strong>Provide Context:</strong> "You are a technical writer for engineers. Keep it concise..."</li>
+                                <li><strong>Show Examples:</strong> Give 1-2 examples of the style/format you want</li>
+                                <li><strong>Set Constraints:</strong> Word limits, format requirements, tone, audience</li>
+                                <li><strong>Ask for Reasoning:</strong> "Explain your reasoning step by step"</li>
+                                <li><strong>Iterate:</strong> Refine prompts based on outputs</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: #f3f4f6; padding: 1.5rem; border-radius: 0.5rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 1rem 0; font-weight: bold;">❌ Bad Prompt:</p>
+                            <p style="color: var(--text-light); margin: 0 0 1rem 0; font-style: italic;">"Write me a product description"</p>
+                            
+                            <p style="color: var(--text-dark); margin: 0 0 1rem 0; font-weight: bold;">✅ Good Prompt:</p>
+                            <p style="color: var(--text-light); margin: 0; font-style: italic;">"Write a 2-sentence product description for an AI-powered task manager called 'TaskFlow'. Target audience: busy professionals. Tone: professional but friendly. Focus on time-saving benefits. Avoid jargon."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">🔬 Advanced Techniques</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #059669;">Chain-of-Thought Prompting</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Ask the LLM to explain its reasoning step by step → better answers on complex problems</p>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #059669;">Few-Shot Learning</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Provide a few examples of what you want → LLM applies pattern to new data</p>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #059669;">Role Switching</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Assign personas: "Act as a stern editor" vs "act as a supportive coach" → different outputs</p>
+                        </div>
+                        <div>
+                            <strong style="color: #059669;">Retrieval Augmented Generation (RAG)</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Combine LLM with knowledge base access → reduce hallucinations, ground in company data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise Section -->
+            <div style="margin: 2rem 0;">
+                <h2 style="color: #059669; margin-bottom: 1rem;">✏️ Your Exercise This Week</h2>
+                <div style="background: #dbeafe; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Test LLM Capabilities & Limits</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Use ChatGPT, Claude, or Gemini to run these experiments:</p>
+                    <ol style="margin-left: 2rem; color: var(--text-light); margin-bottom: 1rem;">
+                        <li><strong>Knowledge Cutoff Test:</strong> Ask for current stock prices or 2025 news → observe the cutoff limitation</li>
+                        <li><strong>Math Precision Test:</strong> Ask it to multiply two 4-digit numbers → see where it fails</li>
+                        <li><strong>Web Access Test:</strong> Ask it to check a live webpage → note the limitation</li>
+                        <li><strong>Hallucination Test:</strong> Ask about something in your company that doesn't exist → catch it fabricating</li>
+                        <li><strong>Prompting Comparison:</strong> Ask a vague question, then ask the same thing with detailed context → compare results</li>
+                    </ol>
+                    <div style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-dark); margin: 0;"><strong>💡 Reflection:</strong> Document where it succeeds and where it fails. How does this affect your product ideas?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div style="margin: 3rem 0; padding: 2rem; background: var(--bg-light); border-radius: 0.75rem; border: 2px solid #059669;">
+                <h2 style="color: #059669; margin-bottom: 1.5rem;">📋 Week 2 Summary</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 0.5rem;">
+                        <h4 style="color: #059669; margin-bottom: 0.5rem;">✅ You Know Now</h4>
+                        <ul style="color: var(--text-light); list-style-position: inside; font-size: 0.95rem;">
+                            <li>How transformers work</li>
+                            <li>Why LLMs are different</li>
+                            <li>LLM capabilities & limits</li>
+                            <li>Effective prompting</li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 0.5rem;">
+                        <h4 style="color: #059669; margin-bottom: 0.5rem;">🎯 Next Up</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">Week 3: Ethics & Responsible AI — the critical guardrails for deploying AI products</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Section -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f9fafb; border-radius: 0.75rem;">
+                <h2 style="color: #059669; margin-bottom: 1.5rem;">📚 Additional Resources</h2>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <h4>Core Papers</h4>
+                        <ul style="color: var(--text-light); list-style-position: inside; font-size: 0.95rem;">
+                            <li>"Attention is All You Need" (transformers)</li>
+                            <li>"Language Models are Unsupervised Multitask Learners"</li>
+                            <li>OpenAI GPT Papers</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Tools to Experiment</h4>
+                        <ul style="color: var(--text-light); list-style-position: inside; font-size: 0.95rem;">
+                            <li>ChatGPT (OpenAI)</li>
+                            <li>Claude (Anthropic)</li>
+                            <li>Gemini (Google)</li>
+                            <li>Llama (Meta, open-source)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Learning Paths</h4>
+                        <ul style="color: var(--text-light); list-style-position: inside; font-size: 0.95rem;">
+                            <li>Fast.ai NLP Course</li>
+                            <li>DeepLearning.AI Courses</li>
+                            <li>Hugging Face Tutorials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="week-01.html" class="btn btn-secondary">← Week 1</a>
+                <a href="../index.html" class="btn btn-secondary">Back to Phase 1</a>
+                <a href="week-03.html" class="btn btn-primary">Next: Week 3 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>📚 Week 2</h4>
+                <ul>
+                    <li>LLM Fundamentals</li>
+                    <li>Transformers</li>
+                    <li>Prompting</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📖 Resources</h4>
+                <ul>
+                    <li><a href="week-01.html">Week 1</a></li>
+                    <li><a href="../index.html">Back to Phase 1</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤝 Community</h4>
+                <ul>
+                    <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub Repo</a></li>
+                    <li><a href="../../CONTRIBUTING.md">Contribute</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI for Product Owner. Licensed under CC BY 4.0.</p>
+        </div>
+    </footer>
+</body>
+</html>

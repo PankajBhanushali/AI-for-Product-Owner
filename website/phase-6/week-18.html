@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 18: AI Scaling & Cost - AI for Product Owner</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI for Product Owner</div>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../curriculum/">Curriculum</a></li>
+                <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="../../index.html">Home</a> <span>/</span> <a href="../index.html">Phase 6</a> <span>/</span> <span>Week 18: AI Scaling & Cost</span>
+    </div>
+
+    <main>
+        <section class="hero" style="padding: 3rem 2rem; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+            <div class="hero-content">
+                <h1 style="margin-bottom: 0.5rem;">📈 Week 18: AI Scaling & Cost Optimization</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Managing AI costs and scaling operations</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                    <div>⏱️ <strong>Duration:</strong> 1 week</div>
+                    <div>📚 <strong>Content:</strong> 5-6 hours</div>
+                    <div>🎯 <strong>Level:</strong> Intermediate</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 2rem;">
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: #f59e0b; margin-bottom: 1.5rem;">🎯 What You'll Learn</h2>
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="border-left-color: #fbbf24;">
+                        <h4>Cost Drivers</h4>
+                        <p>API calls, compute, storage, labor</p>
+                    </div>
+                    <div class="card" style="border-left-color: #fbbf24;">
+                        <h4>Cost Optimization</h4>
+                        <p>Caching, batching, model distillation</p>
+                    </div>
+                    <div class="card" style="border-left-color: #fbbf24;">
+                        <h4>Infrastructure Scaling</h4>
+                        <p>Auto-scaling, load balancing, regionalization</p>
+                    </div>
+                    <div class="card" style="border-left-color: #fbbf24;">
+                        <h4>ROI Calculation</h4>
+                        <p>Cost vs benefit analysis for AI features</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem; padding: 2rem; background: #fffbeb; border-radius: 0.75rem; border-left: 4px solid #f59e0b;">
+                <h2 style="color: #f59e0b; margin-bottom: 1rem;">AI Cost Architecture</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">The Cost Equation</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Total AI Cost = API Costs + Compute + Storage + Labor</strong></p>
+                        
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">API Costs (Third-Party Models)</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">If using OpenAI, Anthropic, etc: $/token or $/request. Scales with volume.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">Compute (GPUs, TPUs)</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">If hosting own model: cloud GPU $/hour or on-premise hardware cost. A100 ~$1.50/hour on GCP.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">Storage (Vector DB, Training Data)</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Vector embeddings, model checkpoints, training data. Pinecone ~$0.40/1M vectors.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">Labor (Engineering, Data, Ops)</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Often biggest cost: salaries. 1 ML engineer = $150k-$300k/year.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Cost Optimization Strategies</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>How to reduce AI costs without sacrificing quality:</strong></p>
+                        
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li><strong>Caching:</strong> Cache model outputs. If 100 users search for "Macbook", show cached results. Saves 99% of requests.</li>
+                            <li><strong>Batching:</strong> Group inference requests. 100 sequential requests = 1 batch request. Reduces latency, reduces cost.</li>
+                            <li><strong>Model distillation:</strong> Train smaller, faster model to mimic large one. Inference 10x faster, 90% accuracy retained.</li>
+                            <li><strong>Quantization:</strong> Compress model weights (FP32 → INT8). Smaller, faster, less memory.</li>
+                            <li><strong>Fallback models:</strong> Use fast, cheap model for 95% of cases. Reserve expensive model for edge cases.</li>
+                            <li><strong>Reserved capacity:</strong> Buy reserved GPUs on cloud. 70% cheaper than on-demand if you can commit upfront.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Scaling for Millions of Users</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Infrastructure patterns that work at scale:</strong></p>
+                        
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">1. Load Balancing</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Distribute requests across multiple GPU servers. If one dies, traffic reroutes.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">2. Auto-scaling</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Spin up more GPUs when latency exceeds threshold. Spin down in off-peak hours.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">3. Multi-region Deployment</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Deploy same model in US-East, US-West, EU. Users get lower latency.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">4. Asynchronous Processing</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Queue heavy requests. Process overnight. Return results via email/webhook.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">ROI & Unit Economics</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>How to know if your AI feature is worth the cost:</strong></p>
+                        
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li><strong>Cost per inference:</strong> Total cost / number of inferences. If $0.001/prediction and you make 1M predictions/month = $1,000/month</li>
+                            <li><strong>Benefit per inference:</strong> How much revenue/value per prediction? If 10% conversions at $100 order value = $10 benefit per prediction</li>
+                            <li><strong>Payback period:</strong> How long until AI investment pays for itself? If costs $50k to build and saves $5k/month = 10 months payback</li>
+                            <li><strong>Gross margin impact:</strong> AI costs should be &lt; 10% of revenue generated. If AI costs $10k/month and generates $100k/month in value, you're good.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h2 style="color: #f59e0b; margin-bottom: 1rem;">✏️ Your Exercise This Week</h2>
+                <div style="background: #fef3c7; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Build Your AI Cost Model</h3>
+                    <ol style="margin-left: 2rem; color: var(--text-light);">
+                        <li>Estimate monthly API costs ($/request × monthly requests)</li>
+                        <li>Estimate infrastructure costs (GPU hours, storage, CDN)</li>
+                        <li>Estimate labor costs (engineer hours × rate)</li>
+                        <li>Calculate cost per inference</li>
+                        <li>Identify 3 cost optimization opportunities</li>
+                        <li>Build ROI calculator: cost vs projected revenue/benefit</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="week-17.html" class="btn btn-secondary">← Week 17</a>
+                <a href="../index.html" class="btn btn-secondary">Back to Phase 6</a>
+                <a href="phase-7.html" class="btn btn-primary">Next: Phase 7 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>📚 Week 18</h4>
+                <ul>
+                    <li>Cost Drivers</li>
+                    <li>Optimization</li>
+                    <li>ROI</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📖 Resources</h4>
+                <ul>
+                    <li><a href="week-17.html">Week 17</a></li>
+                    <li><a href="../index.html">Phase 6</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤝 Community</h4>
+                <ul>
+                    <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub Repo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI for Product Owner. Licensed under CC BY 4.0.</p>
+        </div>
+    </footer>
+</body>
+</html>
