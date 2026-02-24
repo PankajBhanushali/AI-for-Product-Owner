@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1: AI Literacy & Fundamentals - AI for Product Owner</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI for Product Owner</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="../curriculum/">Curriculum</a></li>
+                <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="index.html">Home</a> <span>/</span> <a href="phase-1.html">Phase 1</a> <span>/</span> <span>Week 1: AI Literacy</span>
+    </div>
+
+    <main>
+        <!-- Week Header -->
+        <section class="hero" style="padding: 3rem 2rem; background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);">
+            <div class="hero-content">
+                <h1 style="margin-bottom: 0.5rem;">📚 Week 1: AI Literacy & Fundamentals</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Master the foundational concepts of AI, Machine Learning, and how they work</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                    <div>⏱️ <strong>Duration:</strong> 1 week</div>
+                    <div>📚 <strong>Content:</strong> 4-5 hours</div>
+                    <div>🎯 <strong>Level:</strong> Beginner</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 2rem;">
+            <!-- Week Learning Objectives -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">🎯 What You'll Learn</h2>
+                
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="border-left-color: var(--success-color);">
+                        <h4>Understanding AI Terminology</h4>
+                        <p>Learn the difference between AI, Machine Learning, Deep Learning, and Generative AI</p>
+                    </div>
+                    <div class="card" style="border-left-color: var(--success-color);">
+                        <h4>How AI Systems Learn</h4>
+                        <p>Explore supervised learning, unsupervised learning, and how models train on data</p>
+                    </div>
+                    <div class="card" style="border-left-color: var(--success-color);">
+                        <h4>Real-World Applications</h4>
+                        <p>See practical examples of AI in products you use every day</p>
+                    </div>
+                    <div class="card" style="border-left-color: var(--success-color);">
+                        <h4>Critical Thinking</h4>
+                        <p>Evaluate when AI is the right solution vs. when it isn't</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Content -->
+            <div style="margin-bottom: 3rem; padding: 2rem; background: #f0f9ff; border-radius: 0.75rem; border-left: 4px solid #3b82f6;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Core Concepts</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">What is Artificial Intelligence?</h3>
+                        <p style="color: var(--text-light); margin: 0.5rem 0;">AI is the simulation of human intelligence processes by computer systems. It encompasses three main categories:</p>
+                        <ul style="margin-left: 2rem; margin-top: 1rem; color: var(--text-light);">
+                            <li><strong>Narrow AI (weak AI):</strong> Systems designed for specific tasks (all current AI systems)</li>
+                            <li><strong>General AI (strong AI):</strong> Hypothetical systems with human-level intelligence across domains</li>
+                            <li><strong>Super AI (ASI):</strong> Theoretical AI surpassing human intelligence (not yet realized)</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Machine Learning vs. Deep Learning vs. AI</h3>
+                        <p style="color: var(--text-light); margin: 0.5rem 0;">Understanding the relationship between these terms:</p>
+                        <div style="margin-top: 1rem;">
+                            <div style="margin-bottom: 1rem;">
+                                <strong style="color: #1e40af;">AI (Broadest)</strong>
+                                <div style="margin-left: 1.5rem; color: var(--text-light);">→ Any technique that enables computers to mimic human behavior</div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <strong style="color: #1e40af;">Machine Learning (Subset of AI)</strong>
+                                <div style="margin-left: 1.5rem; color: var(--text-light);">→ Systems that learn and improve from experience without explicit programming</div>
+                            </div>
+                            <div>
+                                <strong style="color: #1e40af;">Deep Learning (Subset of ML)</strong>
+                                <div style="margin-left: 1.5rem; color: var(--text-light);">→ Neural networks with multiple layers that learn from large amounts of data</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Types of Machine Learning</h3>
+                        <ul style="margin-left: 2rem; margin-top: 1rem; color: var(--text-light);">
+                            <li><strong>Supervised Learning:</strong> Learning from labeled data (email spam detection)</li>
+                            <li><strong>Unsupervised Learning:</strong> Finding patterns in unlabeled data (customer segmentation)</li>
+                            <li><strong>Reinforcement Learning:</strong> Learning through rewards and penalties (game AI)</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;">The ML Pipeline: From Data to Predictions</h3>
+                        <ol style="margin-left: 2rem; margin-top: 1rem; color: var(--text-light);">
+                            <li><strong>Data Collection:</strong> Gather relevant examples (emails, transactions, images, etc.)</li>
+                            <li><strong>Data Preparation:</strong> Clean, label, and format data for learning</li>
+                            <li><strong>Feature Engineering:</strong> Identify which characteristics matter most</li>
+                            <li><strong>Model Training:</strong> Expose the model to patterns in data</li>
+                            <li><strong>Model Evaluation:</strong> Test accuracy on new, unseen examples</li>
+                            <li><strong>Deployment:</strong> Put the model into production</li>
+                            <li><strong>Monitoring:</strong> Track performance over time</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">📖 Practical Example: Email Spam Detection</h3>
+                    <div style="background: #fef3c7; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
+                        <p><strong>The Problem:</strong> Gmail receives 200+ million spam emails per day. Humans can't review each one.</p>
+                        <p style="margin-top: 0.5rem;"><strong>The AI Solution:</strong></p>
+                        <ol style="margin-left: 2rem; margin-top: 0.5rem; color: var(--text-light);">
+                            <li><strong>Train:</strong> Feed the model millions of labeled emails (spam/not spam)</li>
+                            <li><strong>Learn:</strong> Model identifies patterns (sender reputation, keywords, links)</li>
+                            <li><strong>Predict:</strong> New email is analyzed and classified in milliseconds</li>
+                            <li><strong>Improve:</strong> User feedback retrains the model</li>
+                        </ol>
+                        <p style="margin-top: 1rem; color: var(--text-dark);"><strong>Key Takeaway:</strong> AI excels at pattern recognition in large datasets—it won't "understand" emails like humans, but it spots patterns humans would miss.</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">🎓 Key Insights for Product Owners</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li><strong>AI is NOT magical</strong>—it's pattern matching at scale</li>
+                            <li><strong>AI needs data, lots of it.</strong> Quality matters more than quantity</li>
+                            <li><strong>AI works best for well-defined, specific problems</strong> (not vague ones)</li>
+                            <li><strong>AI cannot replace human judgment;</strong> it augments it</li>
+                            <li><strong>The model is only as good as the data</strong> it was trained on</li>
+                            <li><strong>Bias in training data</strong> becomes bias in predictions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">⚙️ Common ML Models You Should Know</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #1e40af;">Linear Regression</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Predicts continuous values (house prices, revenue forecasts)</p>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #1e40af;">Logistic Regression</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Predicts binary outcomes (spam/not spam, click/no click)</p>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #1e40af;">Decision Trees & Random Forests</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Like flowcharts—easy to interpret (loan approval, medical diagnosis)</p>
+                        </div>
+                        <div>
+                            <strong style="color: #1e40af;">Neural Networks</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Complex pattern recognition (image recognition, NLP)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge Section -->
+            <div style="margin: 2rem 0;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">⚡ The AI Feasibility Challenge</h2>
+                <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6;">
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Before building AI into your product, ask yourself:</p>
+                    <ul style="margin-left: 2rem; color: var(--text-light);">
+                        <li><strong>Is there enough data?</strong> (typically 1000+ examples minimum)</li>
+                        <li><strong>Can you define success?</strong> (metrics, not vague goals)</li>
+                        <li><strong>Is this repeatability?</strong> (same input = same pattern each time)</li>
+                        <li><strong>Will it improve user value?</strong> (not just cool tech)</li>
+                        <li><strong>Can you afford to be wrong?</strong> (what's the cost of errors?)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; color: var(--text-dark); font-style: italic;">If you can't answer "yes" to most of these, first-generation AI might not be your solution.</p>
+                </div>
+            </div>
+
+            <!-- Exercise Section -->
+            <div style="margin: 2rem 0;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">✏️ Your Exercise This Week</h2>
+                <div style="background: #dbeafe; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Identify AI in Your Product</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Think of 3 features in products you use daily that could be powered by AI or ML. For each one:</p>
+                    <ol style="margin-left: 2rem; color: var(--text-light); margin-bottom: 1rem;">
+                        <li><strong>What is the problem it solves?</strong> (what user pain does it address?)</li>
+                        <li><strong>What type of data would it need?</strong> (and do we have access to it?)</li>
+                        <li><strong>How would you measure success?</strong> (metrics, not vibes)</li>
+                        <li><strong>Could traditional algorithms work instead?</strong> (is ML really necessary?)</li>
+                    </ol>
+                    <p style="color: var(--text-dark); margin-top: 1rem; background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 Tip:</strong> Write your answers down. You'll reference this in Phase 2 when building strategy.</p>
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div style="margin: 3rem 0; padding: 2rem; background: var(--bg-light); border-radius: 0.75rem; border: 2px solid var(--primary-color);">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">📋 Week 1 Summary</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">✅ You Know Now</h4>
+                        <ul style="color: var(--text-light); list-style-position: inside; font-size: 0.95rem;">
+                            <li>AI, ML, DL hierarchy</li>
+                            <li>Supervised vs. unsupervised</li>
+                            <li>How models train</li>
+                            <li>AI limitations</li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">🎯 Next Up</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">Week 2: You'll dive into Large Language Models and understand why they're transforming product development</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Section -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f9fafb; border-radius: 0.75rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">📚 Additional Resources</h2>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <h4>Core Concepts</h4>
+                        <ul style="color: var(--text-light); list-style-position: inside; font-size: 0.95rem;">
+                            <li>Fast.ai Practical Deep Learning</li>
+                            <li>Andrew Ng's ML Fundamentals</li>
+                            <li>Google Cloud AI Basics</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Tools to Try</h4>
+                        <ul style="color: var(--text-light); list-style-position: inside; font-size: 0.95rem;">
+                            <li>Scikit-learn (Python)</li>
+                            <li>Google Colab (free notebooks)</li>
+                            <li>Kaggle (datasets & competitions)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Product Thinking</h4>
+                        <ul style="color: var(--text-light); list-style-position: inside; font-size: 0.95rem;">
+                            <li>"Building ML Systems" - Sculley</li>
+                            <li>MLOps fundamentals</li>
+                            <li>Data strategy frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="phase-1.html" class="btn btn-secondary">← Back to Phase 1</a>
+                <a href="week-02.html" class="btn btn-primary">Next: Week 2 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>📚 Week 1</h4>
+                <ul>
+                    <li>AI Definitions</li>
+                    <li>ML Pipeline</li>
+                    <li>Use Cases</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📖 Resources</h4>
+                <ul>
+                    <li><a href="phase-1.html">Back to Phase 1</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="week-02.html">Week 2</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤝 Community</h4>
+                <ul>
+                    <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub Repo</a></li>
+                    <li><a href="../CONTRIBUTING.md">Contribute</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI for Product Owner. Licensed under CC BY 4.0.</p>
+        </div>
+    </footer>
+</body>
+</html>
