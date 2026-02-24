@@ -1,39 +1,224 @@
-# GitHub Pages Deployment Guide
+# Deployment Configuration
 
-## Overview
+This project uses GitHub Actions to automatically deploy to GitHub Pages for both production and staging environments.
 
-This course is designed to be deployed as a GitHub Pages site using custom HTML and CSS. The website serves as a portal to the curriculum, labs, assessments, and resources.
+## Dual Environment Setup
 
-## Deployment Steps
+You now have two automatically deployed environments:
 
-### Step 1: Fork/Clone the Repository
+### Production (main branch)
+```
+https://pankajbhanushali.github.io/AI-for-Product-Owner/
 
-```bash
-# Clone the repository
-git clone https://github.com/PankajBhanushali/AI-for-Product-Owner.git
-cd AI-for-Product-Owner
-
-# Or fork on GitHub and clone your fork
-git clone https://github.com/YOUR_USERNAME/AI-for-Product-Owner.git
+Status: Live for all users
+Branch: main
+Auto-deploy: Yes
+Deployment branch: main-pages
 ```
 
-### Step 2: Enable GitHub Pages
+### Staging (dev branch)
+```
+https://pankajbhanushali.github.io/AI-for-Product-Owner-dev/
 
-1. Go to your repository on GitHub
-2. Navigate to **Settings** → **Pages**
-3. Under "Source":
-   - Select **Deploy from a branch**
-   - Choose **main** branch
-   - Select **/root** folder
-4. Click **Save**
+Status: For testing/previews
+Branch: dev
+Auto-deploy: Yes
+Deployment branch: dev-pages
+```
 
-Your site will be published at: `https://YOUR_USERNAME.github.io/AI-for-Product-Owner/`
+## Automatic Deployment Workflow
 
-### Step 3: Verify Deployment
+The GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically:
 
-1. Wait for the GitHub Actions workflow to complete (check the Actions tab)
-2. Visit your GitHub Pages URL
-3. You should see the homepage with the course overview
+1. **Watches** for pushes to `main` or `dev` branches
+2. **Builds** the `website/` directory
+3. **Deploys** to GitHub Pages
+4. **Maps** branches:
+   - `main` → `main-pages` → Production URL
+   - `dev` → `dev-pages` → Staging URL
+
+## Release Process with Two Environments
+
+### Step 1: Create Release Branch from Dev
+```bash
+git checkout dev
+git pull origin dev
+git checkout -b releases/1.1.0
+
+# Make content changes
+git add .
+git commit -m "Add Week 21 content for v1.1.0"
+git push origin releases/1.1.0
+```
+
+### Step 2: Test in Staging
+```bash
+# Create PR: releases/1.1.0 → dev
+# On GitHub:
+#   1. Go to Pull Requests
+#   2. Click "New Pull Request"
+#   3. Select releases/1.1.0 → dev
+#   4. Create PR and describe changes
+#   5. Merge to dev
+```
+
+### Step 3: GitHub Actions Deploys to Staging
+```
+PR merged to dev
+    ↓
+GitHub Actions workflow triggered
+    ↓
+Builds website/ directory
+    ↓
+Pushes to dev-pages branch
+    ↓
+Deploy complete in ~1-2 minutes
+    ↓
+View at: https://pankajbhanushali.github.io/AI-for-Product-Owner-dev/
+```
+
+### Step 4: Review Changes in Staging
+- Visit your staging URL above
+- Test all the changes
+- Ensure everything looks correct
+- Share URL with team for review
+
+### Step 5: Create PR to Production
+```bash
+# Create PR: dev → main
+# On GitHub:
+#   1. Go to Pull Requests
+#   2. Click "New Pull Request"
+#   3. Select dev → main
+#   4. Add final notes
+#   5. Merge to main
+```
+
+### Step 6: GitHub Actions Deploys to Production
+```
+PR merged to main
+    ↓
+GitHub Actions workflow triggered
+    ↓
+Builds website/ directory
+    ↓
+Pushes to main-pages branch
+    ↓
+Deploy complete in ~1-2 minutes
+    ↓
+Live at: https://pankajbhanushali.github.io/AI-for-Product-Owner/
+    ↓
+All users see new version
+```
+
+## Managing Both Environments
+
+### Current Content Distribution
+
+```
+Week Content:
+
+Development (local)
+    ↓
+Feature Branch (releases/1.1.0)
+    ↓
+Dev Branch (development environment)
+    ↓
+Staging URL: https://.../dev/
+    ↓
+Main Branch (production environment)
+    ↓
+Production URL: https://.../
+```
+
+### Multiple Release Branches
+
+You can work on multiple versions simultaneously:
+
+```
+main-pages (v1.0.0 - LIVE for users)
+  ↑
+  └─ main branch
+
+dev-pages (v1.1.0-beta - STAGING for testing)
+  ↑
+  └─ dev branch
+      ↑
+      ├─ releases/1.1.0 (in PR)
+      ├─ releases/1.0.1 (hotfix branch)
+      └─ feature/week-21 (new content)
+```
+
+## GitHub Pages Configuration
+
+GitHub Pages is automatically configured through GitHub Actions.
+
+### Settings to Verify
+
+1. Go to **Settings → Pages**
+2. You should see:
+   - Source: **GitHub Actions** (configured)
+   - Status: ✅ **Published** or **Publishing**
+
+3. GitHub automatically creates:
+   - `main-pages` branch (production)
+   - `dev-pages` branch (staging)
+
+## Monitoring Deployments
+
+### View Deployment Status
+
+1. Go to **Actions** tab
+2. Look for "Deploy" workflow runs
+3. See status:
+   - ✅ **Success** = Deployed successfully
+   - ❌ **Failed** = Check logs for errors
+   - ⏳ **In progress** = Deployment running
+
+### View All Deployments
+
+1. Go to **Deployments** tab
+2. See all environments:
+   - github-pages (main-pages)
+   - github-pages (dev-pages)
+3. Click to view:
+   - Deployment date/time
+   - Commit that was deployed
+   - Current status
+
+### Revert Deployment
+
+If something goes wrong:
+
+1. Go to **Deployments**
+2. Find the problematic deployment
+3. Click "Re-run jobs"
+4. Or manually push previous commit
+5. GitHub Actions redeploys automatically
+
+## Example Timeline
+
+**Monday**
+```
+Production: v1.0.0 live
+Staging: Same as production
+```
+
+**Tuesday-Wednesday**
+```
+Production: v1.0.0 (unchanged, users see this)
+Staging: v1.1.0-beta (deploys automatically)
+        Team tests at staging URL
+        Reviews changes
+        Approves PR
+```
+
+**Thursday**
+```
+Production: v1.1.0 (deployed, users see new version)
+Staging: v1.1.0 (now matches production)
+        Ready for next release cycle
+```
 
 ## Directory Structure
 
@@ -41,13 +226,92 @@ The website is organized as follows:
 
 ```
 website/
-├── index.html              # Main homepage
-├── phase-1.html           # Phase 1 overview
-├── phase-2.html           # Phase 2 overview
-├── phase-3.html           # Phase 3 overview
-├── phase-4.html           # Phase 4 overview
-├── phase-5.html           # Phase 5 overview
-├── phase-6.html           # Phase 6 overview
+├── index.html
+├── assets/
+│   └── style.css
+├── labs/
+│   ├── ai-backlog-template.md
+│   ├── ai-cost-calculator-guide.md
+│   ├── ai-risk-register-template.md
+│   └── prompt-test-matrix.md
+├── phase-1/
+│   ├── index.html
+│   ├── week-01.html
+│   ├── week-02.html
+│   └── week-03.html
+├── phase-2/ through phase-7/
+│   └── (similar structure)
+```
+
+## Troubleshooting
+
+### Deployment Failed
+
+**Check the logs:**
+1. Go to **Actions** tab
+2. Click "Deploy" workflow
+3. Click failed run
+4. See error message
+
+**Common issues:**
+- File path errors (check `publish_dir: ./website`)
+- Branch name typo (must be `main` or `dev`)
+- Missing `github_token` (auto-configured)
+
+### Website Not Updating
+
+1. ✅ Check GitHub Actions completed successfully
+2. ✅ Wait 1-2 minutes for propagation
+3. ✅ Clear browser cache (Ctrl+Shift+Delete or Cmd+Shift+Delete)
+4. ✅ Visit incognito/private window
+5. ✅ Check correct URL (main vs dev)
+
+### Want to Add Another Environment?
+
+Add another branch to the workflow:
+
+```yaml
+on:
+  push:
+    branches: [main, dev, staging]  # Add new branch
+```
+
+Push to the new branch, GitHub Actions automatically deploys!
+
+## Deployment Workflow Summary
+
+```
+Developer makes changes
+    ↓
+Create feature branch (git checkout -b feature/...)
+    ↓
+Push to feature branch
+    ↓
+Create PR → dev branch
+    ↓
+(GitHub Actions deploys to dev-pages if merging to dev)
+    ↓
+Test at staging URL
+    ↓
+Create PR → main branch
+    ↓
+(GitHub Actions deploys to main-pages if merging to main)
+    ↓
+Users see production version
+```
+
+## Configuration Files
+
+- **GitHub Actions**: `.github/workflows/deploy.yml`
+- **Website**: `website/` directory
+- **GitHub Pages**: Automatic (via Actions)
+
+## Security
+
+- ✅ Uses GitHub's automatic `GITHUB_TOKEN`
+- ✅ No manual secrets needed
+- ✅ Protected by branch rulesets
+- ✅ Only authorized merges trigger deploys
 ├── phase-7.html           # Phase 7 overview
 └── assets/
     └── style.css          # Global styles

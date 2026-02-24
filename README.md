@@ -128,16 +128,33 @@ You are free to:
 - Use it for any purpose, including commercial
 - Under the condition of proper attribution
 
-## 🌐 Deployment
+## 🌐 Dual Environment Deployment
 
-This repository is deployed as a GitHub Pages site. To deploy your own fork:
+This repository uses **GitHub Actions** to automatically deploy to two environments:
 
+### 🚀 Production (Live)
+**URL**: https://PankajBhanushali.github.io/AI-for-Product-Owner/  
+**Branch**: `main`  
+**Status**: 🟢 Live for all users
+
+### 🧪 Staging (Testing)
+**URL**: https://PankajBhanushali.github.io/AI-for-Product-Owner-dev/  
+**Branch**: `dev`  
+**Status**: 🟡 For testing and previews before production
+
+### How It Works
+- Push to `main` → Automatically deploys to production
+- Push to `dev` → Automatically deploys to staging
+- All deployments happen via GitHub Actions workflow
+
+### For Your Own Fork
 1. Fork this repository
-2. Go to Settings → Pages
-3. Select `main` branch as source
-4. Your site will be available at `https://YOUR_USERNAME.github.io/AI-for-Product-Owner/`
+2. GitHub Actions workflow is pre-configured
+3. Your production site: `https://YOUR_USERNAME.github.io/AI-for-Product-Owner/`
+4. Your staging site: `https://YOUR_USERNAME.github.io/AI-for-Product-Owner-dev/`
+5. Both auto-deploy on push automatically!
 
-For more details, see [Deployment Guide](#deployment-guide) below.
+For detailed deployment information, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## 🔗 Quick Links
 
