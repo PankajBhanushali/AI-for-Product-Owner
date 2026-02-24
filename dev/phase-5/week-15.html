@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 15: AI Compliance - AI for Product Owner</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI for Product Owner</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#curriculum">Curriculum</a></li>
+                <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html">Phase 5</a> <span>/</span> <span>Week 15: AI Compliance</span>
+    </div>
+
+    <main>
+        <section class="hero" style="padding: 3rem 2rem; background: linear-gradient(135deg, #d946ef 0%, #c026d3 100%);">
+            <div class="hero-content">
+                <h1 style="margin-bottom: 0.5rem;">⚖️ Week 15: AI Compliance & Governance</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Navigating regulations and compliance requirements</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                    <div>⏱️ <strong>Duration:</strong> 1 week</div>
+                    <div>📚 <strong>Content:</strong> 5-6 hours</div>
+                    <div>🎯 <strong>Level:</strong> Intermediate to Advanced</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 2rem;">
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: #d946ef; margin-bottom: 1.5rem;">🎯 What You'll Learn</h2>
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="border-left-color: #f472b6;">
+                        <h4>Data Regulations</h4>
+                        <p>GDPR, CCPA, and privacy laws</p>
+                    </div>
+                    <div class="card" style="border-left-color: #f472b6;">
+                        <h4>AI-Specific Regs</h4>
+                        <p>EU AI Act, algorithmic accountability</p>
+                    </div>
+                    <div class="card" style="border-left-color: #f472b6;">
+                        <h4>Domain Compliance</h4>
+                        <p>Healthcare, finance, legal requirements</p>
+                    </div>
+                    <div class="card" style="border-left-color: #f472b6;">
+                        <h4>Documentation</h4>
+                        <p>Audit trails, model cards, impact assessments</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem; padding: 2rem; background: #fce7f3; border-radius: 0.75rem; border-left: 4px solid #d946ef;">
+                <h2 style="color: #d946ef; margin-bottom: 1rem;">Key Compliance Frameworks</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">1. Data Privacy (GDPR, CCPA)</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Key Requirements:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li><strong>Consent:</strong> Get explicit permission before using personal data</li>
+                            <li><strong>Transparency:</strong> Tell users data is being collected</li>
+                            <li><strong>Right to deletion:</strong> Users can request their data be deleted</li>
+                            <li><strong>Data security:</strong> Encrypt personal data, prevent breaches</li>
+                            <li><strong>Cross-border:</strong> Data location restrictions (EU data in EU, etc.)</li>
+                        </ul>
+
+                        <p style="color: var(--text-dark); background: #fef3c7; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;"><strong>For Product Owners:</strong> Ensure your AI doesn't train on personal data without permission. Have a data retention policy.</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">2. EU AI Act</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Categorizes AI by risk level:</strong></p>
+                        
+                        <div style="background: #fef2f2; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); font-weight: bold;">High-Risk (requires certification)</p>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">Criminal justice, employment decisions, credit assessment, biometrics</p>
+                        </div>
+
+                        <div style="background: #fef2f2; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); font-weight: bold;">Medium-Risk (requires transparency)</p>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">Chatbots, recommendation systems, content moderation</p>
+                        </div>
+
+                        <div style="background: #fef2f2; padding: 1rem; border-radius: 0.3rem;">
+                            <p style="color: var(--text-dark); font-weight: bold;">Low-Risk (no restrictions)</p>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">Spam filters, autocomplete, general recommendations</p>
+                        </div>
+
+                        <p style="color: var(--text-dark); background: #fef3c7; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;"><strong>Action:</strong> Determine your AI's risk level. If high-risk, prepare for third-party audit and certification.</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">3. Algorithmic Accountability</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Document everything:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li><strong>Model Card:</strong> What the model does, how it was trained, limitations</li>
+                            <li><strong>Data Sheet:</strong> Origin, composition, and characteristics of training data</li>
+                            <li><strong>Impact Assessment:</strong> Who is affected? What could go wrong?</li>
+                            <li><strong>Audit Trail:</strong> Who made what decisions about the model, when?</li>
+                        </ul>
+
+                        <p style="color: var(--text-dark); background: #fef3c7; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;"><strong>Why?</strong> If something goes wrong, you need to explain how the model works and why you built it that way.</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">4. Domain-Specific Compliance</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;"><strong>Different industries have additional rules:</strong></p>
+                        
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); font-weight: bold;">Healthcare (HIPAA)</p>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">Patient data must be encrypted and access-controlled. Model must explain recommendations.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); font-weight: bold;">Finance (SOX, MiFID)</p>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">Must document model rationale. Trading decisions need human approval.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem;">
+                            <p style="color: var(--text-dark); font-weight: bold;">Employment (EEOC)</p>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">No discrimination. Must audit for disparate impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h2 style="color: #d946ef; margin-bottom: 1rem;">✏️ Your Exercise This Week</h2>
+                <div style="background: #fbecff; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #d946ef;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Create Your Compliance Checklist</h3>
+                    <ol style="margin-left: 2rem; color: var(--text-light);">
+                        <li>Map your AI to EU AI Act risk category</li>
+                        <li>Identify applicable regulations (GDPR, industry-specific, etc.)</li>
+                        <li>Create a Model Card for your AI</li>
+                        <li>Document data sources and retention policy</li>
+                        <li>Draft an AI Impact Assessment</li>
+                        <li>Create audit trail of model development decisions</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="week-14.html" class="btn btn-secondary">← Week 14</a>
+                <a href="../index.html" class="btn btn-secondary">Back to Phase 5</a>
+                <a href="week-16.html" class="btn btn-primary">Next: Week 16 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>📚 Week 15</h4>
+                <ul>
+                    <li>Data Privacy</li>
+                    <li>EU AI Act</li>
+                    <li>Accountability</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📖 Resources</h4>
+                <ul>
+                    <li><a href="week-14.html">Week 14</a></li>
+                    <li><a href="../index.html">Phase 5</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤝 Community</h4>
+                <ul>
+                    <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub Repo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI for Product Owner. Licensed under CC BY 4.0.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12: Model Lifecycle - AI for Product Owner</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI for Product Owner</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#curriculum">Curriculum</a></li>
+                <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="../index.html">Home</a> <span>/</span> <a href="../index.html">Phase 4</a> <span>/</span> <span>Week 12: Model Lifecycle</span>
+    </div>
+
+    <main>
+        <section class="hero" style="padding: 3rem 2rem; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
+            <div class="hero-content">
+                <h1 style="margin-bottom: 0.5rem;">🔄 Week 12: Model Lifecycle & MLOps</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Managing models from development to production</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                    <div>⏱️ <strong>Duration:</strong> 1 week</div>
+                    <div>📚 <strong>Content:</strong> 5-6 hours</div>
+                    <div>🎯 <strong>Level:</strong> Intermediate to Advanced</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 2rem;">
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: #6366f1; margin-bottom: 1.5rem;">🎯 What You'll Learn</h2>
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="border-left-color: #818cf8;">
+                        <h4>ML Pipeline</h4>
+                        <p>From experimentation to production deployment</p>
+                    </div>
+                    <div class="card" style="border-left-color: #818cf8;">
+                        <h4>Model Versioning</h4>
+                        <p>Tracking and managing model versions</p>
+                    </div>
+                    <div class="card" style="border-left-color: #818cf8;">
+                        <h4>Model Monitoring</h4>
+                        <p>Detecting when models degrade in production</p>
+                    </div>
+                    <div class="card" style="border-left-color: #818cf8;">
+                        <h4>Retraining</h4>
+                        <p>Keeping models fresh and accurate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem; padding: 2rem; background: #eef2ff; border-radius: 0.75rem; border-left: 4px solid #6366f1;">
+                <h2 style="color: #6366f1; margin-bottom: 1rem;">The ML Lifecycle</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Six Stages of Model Development</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">Stage 1: Problem Definition</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">What are we trying to predict/classify? Success criteria?</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">Stage 2: Experimentation</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Notebooks, try different models, iterate quickly</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">Stage 3: Testing & Validation</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Evaluate on holdout test set, check for bias, stress-test</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">Stage 4: Deployment</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Shadow mode → canary rollout → full rollout</p>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="color: #6366f1;">Stage 5: Monitoring</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Track performance in production, watch for degradation</p>
+                        </div>
+
+                        <div>
+                            <strong style="color: #6366f1;">Stage 6: Maintenance & Retraining</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Update model regularly or when it drifts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Model Versioning & Registry</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Why version models?</strong> Same as code—need to track what changed, revert if needed, compare performance</p>
+                        
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Model Registry should track:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Model ID, version, date created</li>
+                            <li>Training data version and hyperparameters</li>
+                            <li>Performance metrics on test set</li>
+                            <li>Fairness checks (bias audit results)</li>
+                            <li>Status (in development, in production, archived)</li>
+                            <li>Who trained it and who approved it</li>
+                        </ul>
+
+                        <p style="color: var(--text-dark); background: #fef3c7; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;"><strong>Tools:</strong> MLflow, Weights & Biases, or custom registry</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Monitoring & Alerting</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>What to monitor:</strong></p>
+                        
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">1. Model Performance</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Accuracy, precision, recall. Alert if drops below threshold</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">2. Data Drift</strong>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Input data distribution changed. Model may be out of date.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">3. Prediction Drift</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Model predictions changing unexpectedly. May indicate issues.</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">4. Fairness</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Disparate impact across demographic groups</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 0.5rem 0; font-weight: bold;">5. System Metrics</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Latency, throughput, error rates, cost</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h2 style="color: #6366f1; margin-bottom: 1rem;">✏️ Your Exercise This Week</h2>
+                <div style="background: #dbeafe; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Design Your ML Lifecycle</h3>
+                    <ol style="margin-left: 2rem; color: var(--text-light);">
+                        <li>Document the 6 stages for your AI model</li>
+                        <li>Define success criteria for each stage</li>
+                        <li>Create a versioning scheme (how you'll track models)</li>
+                        <li>List all metrics to monitor post-launch</li>
+                        <li>Set alert thresholds (when should we retrain?)</li>
+                        <li>Document retraining schedule/triggers</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="week-11.html" class="btn btn-secondary">← Week 11</a>
+                <a href="../index.html" class="btn btn-secondary">Back to Phase 4</a>
+                <a href="week-13.html" class="btn btn-primary">Next: Week 13 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>📚 Week 12</h4>
+                <ul>
+                    <li>ML Pipeline</li>
+                    <li>Versioning</li>
+                    <li>Monitoring</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📖 Resources</h4>
+                <ul>
+                    <li><a href="week-11.html">Week 11</a></li>
+                    <li><a href="../index.html">Phase 4</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤝 Community</h4>
+                <ul>
+                    <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub Repo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI for Product Owner. Licensed under CC BY 4.0.</p>
+        </div>
+    </footer>
+</body>
+</html>
