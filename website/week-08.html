@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8: AI UX Patterns - AI for Product Owner</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI for Product Owner</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="../curriculum/">Curriculum</a></li>
+                <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="index.html">Home</a> <span>/</span> <a href="phase-3.html">Phase 3</a> <span>/</span> <span>Week 8: AI UX Patterns</span>
+    </div>
+
+    <main>
+        <section class="hero" style="padding: 3rem 2rem; background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);">
+            <div class="hero-content">
+                <h1 style="margin-bottom: 0.5rem;">🎨 Week 8: AI UX Patterns</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Designing intuitive interfaces for AI-powered features</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                    <div>⏱️ <strong>Duration:</strong> 1 week</div>
+                    <div>📚 <strong>Content:</strong> 4-5 hours</div>
+                    <div>🎯 <strong>Level:</strong> Intermediate</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 2rem;">
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: #0891b2; margin-bottom: 1.5rem;">🎯 What You'll Learn</h2>
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="border-left-color: #06b6d4;">
+                        <h4>Common AI Patterns</h4>
+                        <p>Chat, copilot, autocomplete, recommendations...</p>
+                    </div>
+                    <div class="card" style="border-left-color: #06b6d4;">
+                        <h4>Transparency</h4>
+                        <p>Showing users how AI decisions are made</p>
+                    </div>
+                    <div class="card" style="border-left-color: #06b6d4;">
+                        <h4>Trust Signals</h4>
+                        <p>Building confidence in AI outputs</p>
+                    </div>
+                    <div class="card" style="border-left-color: #06b6d4;">
+                        <h4>Error Handling</h4>
+                        <p>Graceful degradation when AI fails</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem; padding: 2rem; background: #ecf0ff; border-radius: 0.75rem; border-left: 4px solid #0891b2;">
+                <h2 style="color: #0891b2; margin-bottom: 1rem;">Core AI UX Patterns</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Pattern 1: Chat Interface</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem;"><strong>Best for:</strong> Complex queries, conversational help, exploring options</p>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Design Considerations:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Show conversation history (so users remember context)</li>
+                            <li>Display thinking time ("Analyzing..." spinner)</li>
+                            <li>Make it clear which messages are from AI vs user</li>
+                            <li>Offer suggested follow-ups or quick replies</li>
+                            <li>Include feedback buttons (thumbs up/down)</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Pattern 2: Copilot/Sidekick</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem;"><strong>Best for:</strong> Assisting with task at hand (writing, coding, designing)</p>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Design Considerations:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Keep it in-context (next to the content it's helping with)</li>
+                            <li>Easy toggle to show/hide without losing progress</li>
+                            <li>Integration with main editor (apply suggestions easily)</li>
+                            <li>Show what changed compared to original</li>
+                            <li>Let users tweak suggestions before accepting</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Pattern 3: Autocomplete/Suggestions</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem;"><strong>Best for:</strong> Speeding up repetitive tasks (search, form fill, code)</p>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Design Considerations:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Show 3-5 top suggestions (not overwhelming)</li>
+                            <li>Make it obvious it's AI (icon, color, label)</li>
+                            <li>Let users dismiss/refine if not helpful</li>
+                            <li>Trigger intelligently (not on every keystroke—annoying)</li>
+                            <li>Keyboard shortcut to accept (Tab or Ctrl+Right)</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Pattern 4: Recommendations</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem;"><strong>Best for:</strong> Help users discover what they need (content, products, next steps)</p>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Design Considerations:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Explain WHY ("Because you liked X" or "Most popular for Y")</li>
+                            <li>Show confidence level subtly (visual indicators)</li>
+                            <li>Personalization should feel helpful, not creepy</li>
+                            <li>Offer control (prefer less rec? customize preferences)</li>
+                            <li>Track engagement and refine over time</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Pattern 5: Alerts & Insights</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem;"><strong>Best for:</strong> Proactive alerts ("Your inventory is low", "Anomaly detected")</p>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Design Considerations:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Be selective (only alert on high-confidence findings)</li>
+                            <li>Surface in non-intrusive way (badge vs popup)</li>
+                            <li>Provide context ("Why is this happening?")</li>
+                            <li>Offer actions ("Dismiss", "Investigate", "Fix automatically")</li>
+                            <li>Let users control notification frequency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">🎨 Transparency & Trust: Design Principles</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Show the AI's Confidence:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Visual badges: "Highly confident" vs "Not sure"</li>
+                            <li>Probability scores when appropriate: "94% likelihood"</li>
+                            <li>Uncertainty language: "This might be..." vs "This definitely is..."</li>
+                        </ul>
+
+                        <p style="color: var(--text-light); margin-top: 1.5rem; margin-bottom: 1rem;"><strong>Explain the "Why":</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Hover tooltips explaining logic</li>
+                            <li>"This recommendation based on: your browsing history, similar users, trending content"</li>
+                            <li>Show supporting data when available</li>
+                        </ul>
+
+                        <p style="color: var(--text-light); margin-top: 1.5rem; margin-bottom: 1rem;"><strong>Enable User Control:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Ability to modify, refine, or override AI suggestions</li>
+                            <li>Feedback mechanism ("This was helpful" / "Not useful")</li>
+                            <li>Control center to adjust AI behavior</li>
+                        </ul>
+
+                        <p style="color: var(--text-light); margin-top: 1.5rem; margin-bottom: 0;"><strong>Be Honest About Limitations:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>"AI gets this wrong sometimes. Always double-check."</li>
+                            <li>Show what data the AI is seeing ("Based on: these 3 documents")</li>
+                            <li>Clear disclaimers where needed ("Not medical advice")</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">⚠️ Handling AI Errors Gracefully</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>When AI is Uncertain:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>❌ Don't: Show no response or blank state</li>
+                            <li>✅ Do: "I'm not confident about this. Would you like me to escalate or try a different approach?"</li>
+                        </ul>
+
+                        <p style="color: var(--text-light); margin-top: 1.5rem; margin-bottom: 1rem;"><strong>When AI Gets It Wrong:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Provide easy correction ("Did you mean...?")</li>
+                            <li>Learn from feedback ("Got it, I won't suggest that again")</li>
+                            <li>Escalate when needed ("Connecting you to our human team")</li>
+                        </ul>
+
+                        <p style="color: var(--text-light); margin-top: 1.5rem; margin-bottom: 0;"><strong>Performance Issues:</strong></p>
+                        <ul style="margin-left: 2rem; color: var(--text-light);">
+                            <li>Show progress ("Analyzing..." with realistic timeframe)</li>
+                            <li>Allow cancellation ("Stop analyzing")</li>
+                            <li>Fast fallback path ("Try search instead")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h2 style="color: #0891b2; margin-bottom: 1rem;">✏️ Your Exercise This Week</h2>
+                <div style="background: #dbeafe; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Design AI UX for Your Feature</h3>
+                    <ol style="margin-left: 2rem; color: var(--text-light);">
+                        <li>Choose the most appropriate AI pattern (chat, copilot, autocomplete, etc.)</li>
+                        <li>Create low-fidelity wireframes (5 key screens)</li>
+                        <li>Design the happy path + 2 error states</li>
+                        <li>Add transparency elements (confidence indicators, explanations)</li>
+                        <li>Create a design spec document with patterns and guidelines</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="week-07.html" class="btn btn-secondary">← Week 7</a>
+                <a href="phase-3.html" class="btn btn-secondary">Back to Phase 3</a>
+                <a href="week-09.html" class="btn btn-primary">Next: Week 9 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>📚 Week 8</h4>
+                <ul>
+                    <li>UX Patterns</li>
+                    <li>Transparency</li>
+                    <li>Error Handling</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📖 Resources</h4>
+                <ul>
+                    <li><a href="week-07.html">Week 7</a></li>
+                    <li><a href="phase-3.html">Phase 3</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤝 Community</h4>
+                <ul>
+                    <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub Repo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI for Product Owner. Licensed under CC BY 4.0.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10: Prompt Engineering - AI for Product Owner</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI for Product Owner</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="../curriculum/">Curriculum</a></li>
+                <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="index.html">Home</a> <span>/</span> <a href="phase-3.html">Phase 3</a> <span>/</span> <span>Week 10: Prompt Engineering</span>
+    </div>
+
+    <main>
+        <section class="hero" style="padding: 3rem 2rem; background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);">
+            <div class="hero-content">
+                <h1 style="margin-bottom: 0.5rem;">💬 Week 10: Prompt Engineering</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Mastering the art of talking to LLMs effectively</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem;">
+                    <div>⏱️ <strong>Duration:</strong> 1 week</div>
+                    <div>📚 <strong>Content:</strong> 5-6 hours</div>
+                    <li>🎯 <strong>Level:</strong> Intermediate</li>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 2rem;">
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: #0891b2; margin-bottom: 1.5rem;">🎯 What You'll Learn</h2>
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="border-left-color: #06b6d4;">
+                        <h4>Art & Science</h4>
+                        <p>Prompting is both craft and engineering</p>
+                    </div>
+                    <div class="card" style="border-left-color: #06b6d4;">
+                        <h4>Advanced Techniques</h4>
+                        <p>Few-shot, chain-of-thought, reasoning</p>
+                    </div>
+                    <div class="card" style="border-left-color: #06b6d4;">
+                        <h4>Testing & Iteration</h4>
+                        <p>How to evaluate and improve prompts</p>
+                    </div>
+                    <div class="card" style="border-left-color: #06b6d4;">
+                        <h4>Production Prompts</h4>
+                        <p>Making prompts robust and maintainable</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem; padding: 2rem; background: #ecf0ff; border-radius: 0.75rem; border-left: 4px solid #0891b2;">
+                <h2 style="color: #0891b2; margin-bottom: 1rem;">Prompt Engineering Mastery</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">The Prompt Formula</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>A good prompt has these elements (in order):</strong></p>
+                        
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <strong style="color: #0891b2;">1. Role/Context</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">"You are a customer support specialist for a SaaS platform..."</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <strong style="color: #0891b2;">2. Task Description</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">"Your job is to respond to customer support emails..."</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <strong style="color: #0891b2;">3. Context/Background</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">"Our product is X, our customers are Y, common issues are Z..."</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <strong style="color: #0891b2;">4. Examples (Few-Shot)</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">1-5 examples of input/output showing expected style</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem; margin-bottom: 1rem;">
+                            <strong style="color: #0891b2;">5. Constraints</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Word limits, tone, format, what to avoid</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.3rem;">
+                            <strong style="color: #0891b2;">6. The Actual Request</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">"Here's the customer email. Please respond:"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Advanced Technique: Chain-of-Thought</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Problem:</strong> LLMs make mistakes on complex reasoning</p>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>Solution:</strong> Ask it to show its reasoning step-by-step</p>
+                        
+                        <div style="background: #f9fafb; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 1rem 0; font-weight: bold;">❌ Without Chain-of-Thought:</p>
+                            <p style="color: var(--text-light); margin: 0; font-style: italic;"><strong>Prompt:</strong> "Is this customer at churn risk? Yes or no."</p>
+                            <p style="color: var(--text-light); margin: 0.5rem 0 0 0; font-style: italic;"><strong>Output:</strong> "Yes"  ← You don't know why!</p>
+                        </div>
+
+                        <div style="background: #f9fafb; padding: 1.5rem; border-radius: 0.5rem;">
+                            <p style="color: var(--text-dark); margin: 0 0 1rem 0; font-weight: bold;">✅ With Chain-of-Thought:</p>
+                            <p style="color: var(--text-light); margin: 0; font-style: italic;"><strong>Prompt:</strong> "Is this customer at churn risk? Think through this step-by-step: (1) What is their usage trend? (2) Have they opened support tickets? (3) Are they in a high-value segment? Then give your conclusion."</p>
+                            <p style="color: var(--text-light); margin: 0.5rem 0 0 0; font-style: italic;"><strong>Output:</strong> "(1) Usage down 40% this month. (2) Yes, 3 tickets about performance. (3) Yes, enterprise customer. Conclusion: High churn risk."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Testing & Iteration</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;"><strong>The Prompt Engineering Cycle:</strong></p>
+                        
+                        <ol style="margin-left: 2rem; color: var(--text-light);">
+                            <li><strong>Write a prompt:</strong> Start simple, iterate</li>
+                            <li><strong>Test on samples:</strong> 10-20 test cases covering edge cases</li>
+                            <li><strong>Grade outputs:</strong> Good/neutral/bad. What % are good?</li>
+                            <li><strong>Analyze failures:</strong> Why did it fail? Common patterns?</li>
+                            <li><strong>Refine prompt:</strong> Add examples, clarify instructions, adjust tone</li>
+                            <li><strong>Repeat:</strong> Run 10+ iterations targeting 90%+ success</li>
+                        </ol>
+
+                        <p style="color: var(--text-dark); background: #fef3c7; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;"><strong>Tool Tip:</strong> Use spreadsheets or tools like Promptfoo to track iterations and scores.</p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Common Prompt Patterns</h3>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <strong style="color: #0891b2;">Classification</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Categorizing inputs (e.g., ticket type, sentiment)</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;"><strong>Tip:</strong> List exact categories. Use examples of each.</p>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <strong style="color: #0891b2;">Extraction</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Pulling structured data from text</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;"><strong>Tip:</strong> Specify exact JSON format wanted. Use examples.</p>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <strong style="color: #0891b2;">Generation</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Creating new content (emails, summaries, code)</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;"><strong>Tip:</strong> Show style examples. Set tone & length constraints.</p>
+                        </div>
+
+                        <div>
+                            <strong style="color: #0891b2;">Reasoning</strong>
+                            <p style="color: var(--text-light); margin: 0.5rem 0; font-size: 0.95rem;">Complex multi-step analysis</p>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;"><strong>Tip:</strong> Use chain-of-thought. Show reasoning examples.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h2 style="color: #0891b2; margin-bottom: 1rem;">✏️ Your Exercise This Week</h2>
+                <div style="background: #dbeafe; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Write & Test Production Prompts</h3>
+                    <ol style="margin-left: 2rem; color: var(--text-light);">
+                        <li>Identify 3 AI capabilities you need from Week 7-9</li>
+                        <li>For each, write 2 prompt versions (simple vs advanced)</li>
+                        <li>Test both on 10-15 sample inputs from your product</li>
+                        <li>Grade outputs (good/neutral/bad)</li>
+                        <li>Document the best-performing prompts</li>
+                        <li>Create a "Prompt Library" document for your team</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="week-09.html" class="btn btn-secondary">← Week 9</a>
+                <a href="phase-3.html" class="btn btn-secondary">Back to Phase 3</a>
+                <a href="phase-4.html" class="btn btn-primary">Next: Phase 4 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>📚 Week 10</h4>
+                <ul>
+                    <li>Prompt Engineering</li>
+                    <li>Advanced Techniques</li>
+                    <li>Testing</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📖 Resources</h4>
+                <ul>
+                    <li><a href="week-09.html">Week 9</a></li>
+                    <li><a href="phase-3.html">Phase 3</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤝 Community</h4>
+                <ul>
+                    <li><a href="https://github.com/PankajBhanushali/AI-for-Product-Owner" target="_blank">GitHub Repo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI for Product Owner. Licensed under CC BY 4.0.</p>
+        </div>
+    </footer>
+</body>
+</html>
